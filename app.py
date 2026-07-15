@@ -33,7 +33,7 @@ class UploadForm(FlaskForm):
 
 device = torch.device("cpu")
 
-encoder = VGGEncoder('vgg_encoder_small.pth').to(device)
+encoder = VGGEncoder('vgg_normalised.pth').to(device)
 decoder = Decoder().to("cpu") # use device instead of cpu . 
 
 MODEL_PATH = os.path.join(
