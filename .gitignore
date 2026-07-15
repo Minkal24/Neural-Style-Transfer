@@ -21,5 +21,3 @@ venv/
 # Windows
 Thumbs.db
 
-#vgg
-vgg_normalised.pth
