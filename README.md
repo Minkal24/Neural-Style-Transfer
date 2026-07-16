@@ -218,11 +218,11 @@ python train.py --resume
 
 ## Home Page
 
-*(Add screenshot here)*
+*screenshot\example.png*
 
-## Generated Output
+## Example
 
-*(Add screenshot here)*
+*screenshot\example.png*
 
 ---
 
