@@ -1,11 +1,11 @@
 # 🎨 Neural Style Transfer using AdaIN
 
-A deep learning project that implements **Arbitrary Neural Style Transfer** using **Adaptive Instance Normalization (AdaIN)**. The project includes both:
+A deep learning project that implements **Arbitrary Neural Style Transfer** using **Adaptive Instance Normalization (AdaIN)**. The project includes:
 
 - 🧠 AdaIN model training using **PyTorch**
 - 🌐 A Flask web application for real-time style transfer
 
-Users can upload a **content image** and a **style image**, adjust the style intensity, and generate a stylized output.
+Users can upload a **content image** and a **style image**, adjust the style intensity using the **Alpha** parameter, and generate a stylized output.
 
 ---
 
@@ -13,9 +13,17 @@ Users can upload a **content image** and a **style image**, adjust the style int
 
 Neural Style Transfer combines the content of one image with the artistic style of another.
 
-This project implements the **AdaIN (Adaptive Instance Normalization)** method proposed by **Huang & Belongie (ICCV 2017)**.
+This project implements the **Adaptive Instance Normalization (AdaIN)** method proposed by **Huang & Belongie (ICCV 2017)**.
 
-The model was trained using **PyTorch** on **Kaggle GPU**, and the trained decoder was integrated into a Flask web application.
+The model was trained using **PyTorch** on **Kaggle GPU**, and the trained decoder was integrated into a **Flask** web application for real-time image stylization.
+
+---
+
+# 🎥 Demo Video
+
+▶️ **Project Demo**
+
+YOUR_VIDEO_LINK_HERE
 
 ---
 
@@ -34,7 +42,7 @@ The model was trained using **PyTorch** on **Kaggle GPU**, and the trained decod
 
 ---
 
-# 🛠 Technologies Used
+# 🛠️ Technologies Used
 
 - Python
 - PyTorch
@@ -47,6 +55,7 @@ The model was trained using **PyTorch** on **Kaggle GPU**, and the trained decod
 - JavaScript
 - Bootstrap
 
+---
 
 # 🧠 Model Architecture
 
@@ -66,10 +75,10 @@ Components include:
 
 - Reflection Padding
 - Convolution Layers
-- ReLU
-- Upsampling
+- ReLU Activation
+- Upsampling Layers
 
-Only the decoder is trained.
+Only the **Decoder** is trained.
 
 ---
 
@@ -78,7 +87,7 @@ Only the decoder is trained.
 1. Load Content Image
 2. Load Style Image
 3. Extract Features using VGG Encoder
-4. Apply AdaIN
+4. Apply Adaptive Instance Normalization (AdaIN)
 5. Generate Stylized Image
 6. Compute Content Loss
 7. Compute Style Loss
@@ -94,38 +103,41 @@ AdaIN(x,y)=\sigma(y)\left(\frac{x-\mu(x)}{\sigma(x)}\right)+\mu(y)
 
 Where
 
-- x → Content Feature
-- y → Style Feature
+- **x** → Content Feature
+- **y** → Style Feature
 
 ---
 
 # 📊 Loss Function
 
-### Content Loss
+## Content Loss
 
-Mean Squared Error between
+Mean Squared Error (MSE) between:
 
 - Generated Features
 - AdaIN Features
 
-### Style Loss
+## Style Loss
 
-Calculated using
+Calculated using:
 
 - Mean
 - Standard Deviation
 
 across multiple encoder layers.
 
-Total Loss
+### Total Loss
 
+```
 Loss = Content Loss + Style Weight × Style Loss
+```
 
+---
 
 # 📈 Training Details
 
 | Parameter | Value |
-|-----------|------:|
+|-----------|--------|
 | Framework | PyTorch |
 | Image Size | 256 × 256 |
 | Content Weight | 1 |
@@ -150,7 +162,7 @@ The Flask application allows users to:
 
 ---
 
-# ⚙ Installation
+# ⚙️ Installation
 
 Clone the repository
 
@@ -164,15 +176,13 @@ Move into the project
 cd Neural-Style-Transfer
 ```
 
-Create virtual environment
+Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate
-
-### Windows
+Activate it (Windows)
 
 ```bash
 .venv\Scripts\activate
@@ -186,7 +196,7 @@ pip install -r requirements.txt
 
 ---
 
-# ▶ Run the Flask Application
+# ▶️ Run the Flask Application
 
 ```bash
 python app.py
@@ -216,13 +226,21 @@ python train.py --resume
 
 # 📷 Screenshots
 
-## Home Page
+## 🏠 Home Page
 
-*screenshot\example.png*
+![Home Page](screenshot/homepage.png)
 
-## Example
+---
 
-*screenshot\example.png*
+## 🎨 Example
+
+![Example](screenshot/example.png)
+
+---
+
+## 📤 Upload Image
+
+![Upload Image](screenshot/upload_image.png)
 
 ---
 
@@ -235,6 +253,8 @@ python train.py --resume
 - Cloud Model Hosting
 - User Authentication
 
+---
+
 # 📚 Research Paper
 
 **Arbitrary Style Transfer in Real-Time with Adaptive Instance Normalization**
@@ -243,8 +263,10 @@ python train.py --resume
 
 **Conference:** ICCV 2017
 
+---
 
-#  Acknowledgements
+# 🙏 Acknowledgements
+
 - PyTorch
 - Torchvision
 - Flask
@@ -252,15 +274,21 @@ python train.py --resume
 - ICCV 2017 AdaIN Paper
 - VGG-19 Pretrained Model
 
+---
+
 # 👨‍💻 Author
 
 ## Minkal Katariya
+
 Computer Science Student
 
-Interested in:
+**Interested in:**
+
 - Deep Learning
 - Computer Vision
 - Generative AI
 - PyTorch
+
+---
 
 ## ⭐ If you found this project useful, please consider giving it a star!
