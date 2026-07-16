@@ -17,15 +17,6 @@ This project implements the **Adaptive Instance Normalization (AdaIN)** method p
 
 The model was trained using **PyTorch** on **Kaggle GPU**, and the trained decoder was integrated into a **Flask** web application for real-time image stylization.
 
----
-
-# 🎥 Demo Video
-
-▶️ **Project Demo**
-
-YOUR_VIDEO_LINK_HERE
-
----
 
 # ✨ Features
 
