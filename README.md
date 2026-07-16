@@ -231,7 +231,7 @@ python train.py --resume
 
 ## 📤 Upload Image
 
-![Upload Image](screenshot/upload image.png)
+![Upload Image](screenshot/upload%20image.png)
 
 ---
 
